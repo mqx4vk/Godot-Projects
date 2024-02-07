@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpjaukvkpf3ya"]
+
+[ext_resource type="Texture2D" uid="uid://vjf8t3votnvg" path="res://Textures/pngtree-planets-and-meteorite-planet-space-picture-image_8781249.png" id="1_7pyce"]
+[ext_resource type="PackedScene" uid="uid://dpr8gmbktj7fv" path="res://planet_1.tscn" id="2_3cgfl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pq5vq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pkcgn"]
+radius = 12.0
+
+[node name="Solar System Scene" type="Node2D"]
+
+[node name="Sun Node" type="RigidBody2D" parent="."]
+position = Vector2(858, 801)
+physics_material_override = SubResource("PhysicsMaterial_pq5vq")
+gravity_scale = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sun Node"]
+position = Vector2(449, 234)
+texture = ExtResource("1_7pyce")
+region_enabled = true
+region_rect = Rect2(43, 49, 126, 129)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun Node"]
+position = Vector2(450, 233)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pkcgn")
+
+[node name="Camera2D" type="Camera2D" parent="Sun Node"]
+position = Vector2(884, 427)
+editor_draw_drag_margin = true
+
+[node name="Planet 1" parent="." instance=ExtResource("2_3cgfl")]
+position = Vector2(1056, 891)
+
+[node name="Planet 2" type="RigidBody2D" parent="."]
+position = Vector2(1239, 1151)
+physics_material_override = SubResource("PhysicsMaterial_pq5vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planet 2"]
+position = Vector2(455, 234)
+texture = ExtResource("1_7pyce")
+region_enabled = true
+region_rect = Rect2(357, 62, 108, 112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planet 2"]
+position = Vector2(450, 233)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pkcgn")
+
+[node name="Planet 3" type="RigidBody2D" parent="."]
+position = Vector2(1468, 1339)
+physics_material_override = SubResource("PhysicsMaterial_pq5vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planet 3"]
+position = Vector2(449, 234)
+texture = ExtResource("1_7pyce")
+region_enabled = true
+region_rect = Rect2(503, 63, 111, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planet 3"]
+position = Vector2(450, 233)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pkcgn")
+
+[node name="Planet 4" type="RigidBody2D" parent="."]
+position = Vector2(1669, 1534)
+physics_material_override = SubResource("PhysicsMaterial_pq5vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planet 4"]
+position = Vector2(449, 234)
+texture = ExtResource("1_7pyce")
+region_enabled = true
+region_rect = Rect2(660, 63, 107, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planet 4"]
+position = Vector2(450, 233)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pkcgn")
+
+[node name="Planet 5" type="RigidBody2D" parent="."]
+position = Vector2(1898, 1725)
+physics_material_override = SubResource("PhysicsMaterial_pq5vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planet 5"]
+position = Vector2(449, 234)
+texture = ExtResource("1_7pyce")
+region_enabled = true
+region_rect = Rect2(812, 62, 107, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planet 5"]
+position = Vector2(450, 233)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pkcgn")
+
+[node name="Comet" type="RigidBody2D" parent="."]
+position = Vector2(2121, 1865)
+physics_material_override = SubResource("PhysicsMaterial_pq5vq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Comet"]
+position = Vector2(449, 234)
+texture = ExtResource("1_7pyce")
+region_enabled = true
+region_rect = Rect2(353, 257, 113, 103)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Comet"]
+position = Vector2(450, 233)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_pkcgn")
