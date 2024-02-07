@@ -210,6 +210,13 @@ scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_pkcgn")
 one_way_collision_margin = 8.5
 script = ExtResource("5_rkn1l")
-rotation_speed = 0.01
-oscillation_frequency = 8.0
-amplitude = 0.1
+
+[node name="Sprite2D2" type="Sprite2D" parent="Optional Comet/CollisionShape2D"]
+position = Vector2(212.5, 261.75)
+rotation = -6.28319
+scale = Vector2(0.0950886, 0.124765)
+texture = ExtResource("1_ojava")
+region_enabled = true
+region_rect = Rect2(43, 249, 295, 123)
+script = ExtResource("5_j1vrc")
+rotation_speed = 0.02
