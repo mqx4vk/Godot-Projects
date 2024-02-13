@@ -14,8 +14,8 @@ radius = 8.55132
 [node name="Solar System Scene" type="Node2D"]
 
 [node name="Screenshot2024-02-06092251" type="Sprite2D" parent="."]
-position = Vector2(-814, 887)
-scale = Vector2(4.90627, 6.69036)
+position = Vector2(282, 1261)
+scale = Vector2(5.82485, 8.1759)
 texture = ExtResource("1_0mcvf")
 
 [node name="Sun Node" type="RigidBody2D" parent="."]
@@ -128,13 +128,6 @@ region_rect = Rect2(660, 63, 107, 104)
 script = ExtResource("5_j1vrc")
 rotation_speed = 0.042
 
-[node name="Sprite2D" type="Sprite2D" parent="Planet 3 Orbit w moon/CollisionShape2D/Sprite2D2"]
-position = Vector2(98.6905, 41.7492)
-scale = Vector2(0.535966, 0.559505)
-texture = ExtResource("1_ojava")
-region_enabled = true
-region_rect = Rect2(662, 257, 103, 103)
-
 [node name="Sprite2D3" type="Sprite2D" parent="Planet 3 Orbit w moon/CollisionShape2D"]
 position = Vector2(80.5, 137.5)
 scale = Vector2(0.220386, 0.227549)
@@ -145,6 +138,13 @@ region_rect = Rect2(660, 63, 107, 104)
 [node name="Sprite2D" type="Sprite2D" parent="Planet 3 Orbit w moon/CollisionShape2D/Sprite2D3"]
 visible = false
 position = Vector2(99.8248, 39.5519)
+scale = Vector2(0.535966, 0.559505)
+texture = ExtResource("1_ojava")
+region_enabled = true
+region_rect = Rect2(662, 257, 103, 103)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Planet 3 Orbit w moon/CollisionShape2D/Sprite2D3"]
+position = Vector2(98.6906, 39.5519)
 scale = Vector2(0.535966, 0.559505)
 texture = ExtResource("1_ojava")
 region_enabled = true
@@ -194,10 +194,6 @@ region_rect = Rect2(958, 256, 174, 105)
 script = ExtResource("5_j1vrc")
 rotation_speed = 0.02
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1609, 905)
-zoom = Vector2(-0.355, -0.355)
-
 [node name="Optional Comet" type="RigidBody2D" parent="."]
 position = Vector2(-1, 0)
 mass = 3.53
@@ -213,3 +209,7 @@ script = ExtResource("5_rkn1l")
 rotation_speed = 0.01
 oscillation_frequency = 8.0
 amplitude = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1047, 757)
+zoom = Vector2(0.33, 0.33)
