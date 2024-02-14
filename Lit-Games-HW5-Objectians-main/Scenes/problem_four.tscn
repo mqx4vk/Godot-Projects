@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://krm5k3qbjil6"]
+[gd_scene load_steps=8 format=3 uid="uid://prhmpd2jn4a4"]
 
 [ext_resource type="Script" path="res://Scripts/Rotate.gd" id="1_amvju"]
-[ext_resource type="Script" path="res://Scripts/CharacterMovement.gd" id="2_p8r5b"]
 [ext_resource type="Texture2D" uid="uid://w1vm0ib8gkl7" path="res://icon.svg" id="3_apj2e"]
 [ext_resource type="TileSet" uid="uid://dv5pq4cqkyek7" path="res://Scenes/castle_tileset.tres" id="3_goot7"]
 [ext_resource type="PackedScene" uid="uid://cj1vyr6kvr67l" path="res://Scenes/crate.tscn" id="4_onmak"]
@@ -10,19 +9,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4tdo"]
 size = Vector2(53.8982, 646.778)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfytx"]
+size = Vector2(84.6667, 75.3333)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_amvju")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(696, 392)
-scale = Vector2(1.00302, 1.05064)
-collision_mask = 3
-script = ExtResource("2_p8r5b")
-movement_speed = 150.0
-
-[node name="ParentLogo" type="Sprite2D" parent="CharacterBody2D"]
-scale = Vector2(0.747742, 0.713851)
-texture = ExtResource("3_apj2e")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("3_goot7")
@@ -67,3 +58,18 @@ shape = SubResource("RectangleShape2D_n4tdo")
 [node name="Crate3" parent="." instance=ExtResource("4_onmak")]
 position = Vector2(392, 296)
 gravity_scale = 1.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(695, 399)
+scale = Vector2(0.75, 0.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(20.0001, -26.6666)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_hfytx")
+one_way_collision_margin = 0.0
+
+[node name="ParentLogo" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(17.3334, -34.6666)
+scale = Vector2(0.71875, 0.71875)
+texture = ExtResource("3_apj2e")

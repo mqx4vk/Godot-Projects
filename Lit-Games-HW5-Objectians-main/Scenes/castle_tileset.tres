@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=4 format=3 uid="uid://dv5pq4cqkyek7"]
 
-[ext_resource type="Texture2D" uid="uid://b73jw57phqeh1" path="res://Art/tilesets/Terrain (32x32).png" id="1_5ej2o"]
+[ext_resource type="Texture2D" uid="uid://b73jw57phqeh1" path="res://Art/Terrain (32x32).png" id="1_vhtag"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_kkm6n"]
 tile_data = PackedInt32Array(0, 131072, 10, 65536, 131072, 11, 1, 196608, 10, 65537, 196608, 11, 2, 262144, 10, 65538, 262144, 11, 3, 327680, 10, 65539, 327680, 11, 4, 393216, 10, 65540, 393216, 11, 5, 458752, 10, 65541, 458752, 11)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_li67o"]
-texture = ExtResource("1_5ej2o")
+texture = ExtResource("1_vhtag")
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
