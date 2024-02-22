@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq5e5iabrpc8j"]
+
+[ext_resource type="PackedScene" uid="uid://kiu40n6o38nd" path="res://scene.gltf" id="1_3o5cu"]
+[ext_resource type="PackedScene" uid="uid://drv5lwvl1xuv0" path="res://player.tscn" id="2_n0wqa"]
+[ext_resource type="PackedScene" uid="uid://ct27fy3oa2jso" path="res://block.tscn" id="3_6x6ag"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.880676, -0.155283, 0.368155)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_3o5cu")]
+transform = Transform3D(-0.0728901, 0, 0.99734, 0, 1, 0, -0.99734, 0, -0.0728901, -0.488747, 0.117283, 0.798392)
+
+[node name="Node3D" parent="." instance=ExtResource("2_n0wqa")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.543906, 0.127855, 0.795972)
+
+[node name="Node3D2" parent="." instance=ExtResource("3_6x6ag")]
+transform = Transform3D(-6.13371, 0, 0, 0, 1, 0, 0, 0, 6.4018, -0.80549, -0.417527, 0.632)
+
+[node name="Node3D3" parent="." instance=ExtResource("3_6x6ag")]
+transform = Transform3D(-0.105851, 0, 0, 0, 0.0747604, 0, 0, 0, 0.066948, -0.567484, 0.0723186, 0.783301)

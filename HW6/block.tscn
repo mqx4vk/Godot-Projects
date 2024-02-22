@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct27fy3oa2jso"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4e241"]
+size = Vector3(9, 1, 8)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j11ca"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.5)
+shape = SubResource("BoxShape3D_4e241")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_j11ca")
+skeleton = NodePath("../CollisionShape3D")
