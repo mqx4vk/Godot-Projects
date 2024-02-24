@@ -1,5 +1,2 @@
-res://node_3d.tscn
-res://Camera3D.gd
 res://player.tscn
-res://block.tscn
-res://CharacterBody3D.gd
+res://node_3d.tscn
